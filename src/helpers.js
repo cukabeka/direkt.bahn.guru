@@ -5,10 +5,7 @@ import enLocale from 'i18n-iso-countries/langs/en.json'
 import deLocale from 'i18n-iso-countries/langs/de.json'
 
 export const fetchStation = async (query) => {
-	return Promise.race([
-		fetch(`https://v5.db.transport.rest/locations?query=${query}&poi=false&addresses=false`),
-		fetch(`https://v5.db.api.bahn.guru/locations?query=${query}&poi=false&addresses=false`),
-	])
+	return fetch(`https://v6.db.transport.rest/locations?query=${encodeURIComponent(query)}&poi=false&addresses=false`)
 }
 
 countries.registerLocale(enLocale)
