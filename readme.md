@@ -7,6 +7,14 @@
 
 [![Screenshot of direkt.bahn.guru](assets/screenshot.png)](https://direkt.bahn.guru)
 
+## Setup
+
+See [SETUP.md](SETUP.md) for local development and server deployment instructions.
+
+## API Migration
+
+In late 2024, Deutsche Bahn discontinued the unofficial HAFAS API that this project was originally based on. The station search has been migrated to the new [v6.db.transport.rest](https://v6.db.transport.rest/) API, which uses [db-vendo-client](https://github.com/public-transport/db-vendo-client) as its backend. See [SETUP.md](SETUP.md) for details.
+
 ## See also
 
 - [bahn.guru](https://github.com/juliuste/bahn.guru) - Find the cheapest Deutsche Bahn "Sparpreise" (low-cost tickets) for the next month.
